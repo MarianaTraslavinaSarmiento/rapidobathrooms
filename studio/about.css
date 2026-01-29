@@ -1,0 +1,162 @@
+/* Mantiene la MISMA distancia visual entre header y el bloque de abajo */
+.about{
+  padding: 0 0 80px;
+}
+
+/* 1) Columna izquierda un poco menos ancha */
+.about__grid{
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr; /* antes: 1.15fr 0.85fr */
+  gap: 70px;
+  align-items: start;
+  margin-top: 34px;
+}
+
+/* 2) Limita el tamaño de la imagen para que no se “coma” toda la izquierda */
+.about__media{
+  width: 100%;
+  max-width: 640px;   /* ajusta: 600–700 según lo que quieras */
+}
+/* Mantiene la imagen bien proporcional */
+.about__media img{
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* centra el bloque de imagen dentro de su columna */
+}
+
+/* Panel derecho */
+.about__panel{
+  padding-top: 80px; /* baja el texto para alinearlo como en tu screenshot */
+}
+
+/* “ABOUT” pequeño arriba */
+.about__kicker{
+  font-size: 11px;
+  letter-spacing: .18em;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 14px;
+}
+
+/* Título grande */
+.about__title{
+  margin: 0 0 20px;
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+/* Texto */
+.about__body p{
+  margin: 0 0 16px;
+  color: #2b2b2b;
+  font-size: 13px;
+  line-height: 1.85;
+  max-width: 520px;
+}
+
+/* Línea horizontal */
+.about__divider{
+  border: 0;
+  border-top: 1px solid #111;
+  margin: 28px 0 18px;
+}
+
+/* Meta info */
+.about__meta{
+  display: grid;
+  gap: 16px;
+}
+
+.about__meta-label{
+  font-size: 11px;
+  letter-spacing: .14em;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.about__meta-value{
+  font-size: 12px;
+  line-height: 1.7;
+  color: #1a1a1a;
+  max-width: 520px;
+}
+
+/* ----------------------------
+   Responsive (mantiene estilo)
+---------------------------- */
+
+/* Tablet */
+@media (max-width: 1024px){
+  .about__grid{
+    grid-template-columns: 1fr;
+    gap: 40px;
+    margin-top: 24px;
+  }
+
+  .about__panel{
+    padding-top: 0; /* en una columna no hace falta bajarlo */
+  }
+
+  .about__title{
+    font-size: 30px;
+  }
+}
+
+/* Mobile: 1 columna, con aire a los lados lo hereda del container */
+@media (max-width: 640px){
+  .about{
+    padding-bottom: 60px;
+  }
+
+  .about__title{
+    font-size: 28px;
+  }
+}
+
+/* Highlights (About) */
+.about__highlights{
+  margin-top: 18px;
+}
+
+.about__highlights-title{
+  font-size: 12px;
+  letter-spacing: .18em;
+  font-weight: 700;
+  margin: 18px 0 12px;
+}
+
+.about__highlights-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  /* 2 columnas si cabe, 1 columna en mobile */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px 28px;
+  max-width: 560px;
+}
+
+.about__highlights-list li{
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #222;
+}
+
+.about__check{
+  margin-top: 2px;
+  font-size: 14px;
+}
+
+/* Mobile: una columna */
+@media (max-width: 640px){
+  .about__highlights-list{
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

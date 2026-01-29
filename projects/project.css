@@ -1,0 +1,180 @@
+/* /projects/project.css */
+
+.project{
+  padding: 0 0 110px;
+}
+
+/* Distancia igual a la captura: botón pegado arriba pero con aire */
+.project__top{
+  margin-top: 18px;   /* separación respecto al header */
+}
+
+/* Back to Projects */
+.project__back{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 34px; /* espacio entre back y el título grande */
+}
+
+.project__back svg{
+  width: 14px;
+  height: 14px;
+}
+
+/* Título fijo */
+.project__type{
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: .04em;
+  margin: 0 0 22px;
+}
+
+/* Imagen grande, pero NO exagerada: similar al About */
+.project__hero{
+  width: 100%;
+  max-width: 1180px;   /* parecido al “bloque” visual del about */
+  border-radius: 2px;
+  overflow: hidden;
+  background: #f4f4f4;
+  margin: 0 0 44px;    /* separación con el contenido */
+}
+
+.project__hero img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Bloque info */
+.project__content{
+  max-width: 880px; /* ancho como la captura */
+}
+
+/* Nombre del proyecto */
+.project__name{
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 20px;
+}
+
+/* Descripción */
+.project__desc{
+  font-size: 14px;
+  line-height: 1.9;
+  color: #222;
+  margin: 0 0 34px;
+  max-width: 780px;
+}
+
+/* Subtítulos tipo “PROJECT TIMELINE”, “PROJECT HIGHLIGHTS” */
+.project__section-title{
+  font-size: 12px;
+  letter-spacing: .18em;
+  font-weight: 700;
+  margin: 30px 0 12px;
+}
+
+/* Timeline texto */
+.project__timeline{
+  font-size: 13px;
+  color: #222;
+  margin: 0 0 14px;
+}
+
+/* Highlights: TODOS uno debajo del otro, lado izquierdo */
+.project__highlights{
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 60px;
+  display: grid;
+  grid-template-columns: 1fr; /* <- clave: 1 columna SIEMPRE */
+  gap: 16px;
+  max-width: 520px;
+}
+
+.project__highlights li{
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 13px;
+  color: #222;
+}
+
+.project__check{
+  margin-top: 2px;
+  font-size: 14px;
+}
+
+/* CTA final */
+.project__cta{
+  margin-top: 40px;
+}
+
+.project__cta-title{
+  font-size: 56px;
+  font-weight: 400;
+  letter-spacing: .01em;
+  margin: 0 0 10px;
+}
+
+.project__cta-sub{
+  font-size: 15px;
+  color: #333;
+  margin: 0 0 26px;
+}
+
+/* Botón/Link “Get Free Consultation” con flecha */
+.project__cta-link{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.project__cta-link svg{
+  width: 18px;
+  height: 18px;
+}
+
+/* ----------------------------
+   Responsive
+   - Mantiene el orden
+   - Solo “quita altura” de la imagen (la hace menos alta)
+---------------------------- */
+@media (max-width: 1024px){
+  .project__hero{
+    max-width: 100%;
+  }
+  .project__cta-title{
+    font-size: 44px;
+  }
+}
+
+@media (max-width: 640px){
+  .project{
+    padding-bottom: 80px;
+  }
+
+  /* “Quitar altura”: forzamos un recorte leve para que no sea enorme */
+  .project__hero{
+    max-width: 100%;
+  }
+  .project__hero img{
+    height: 320px;      /* <- menos alto en mobile */
+    object-fit: cover;  /* recorta sin deformar */
+  }
+
+  .project__type{
+    font-size: 18px;
+  }
+
+  .project__cta-title{
+    font-size: 38px;
+    line-height: 1.1;
+  }
+}

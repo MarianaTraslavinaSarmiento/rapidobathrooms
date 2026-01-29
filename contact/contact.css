@@ -1,0 +1,58 @@
+/* /contact/contact.css */
+
+.contact{
+  padding: 0 0 140px;
+}
+
+.contact__wrap{
+  text-align: center;
+  max-width: 760px;
+
+  /* Empuja el bloque hacia abajo como en el diseño */
+  margin: 0 auto;
+  margin-top: 155px;
+}
+
+/* Prefer to talk? Call us now:  */
+.contact__kicker{
+  margin: 0 0 26px;
+  font-size: 14px;     /* ↑ antes 12 */
+  font-weight: 400;
+  color: #1a1a1a;
+}
+
+/* Teléfono grande */
+.contact__phone{
+  display: inline-block;
+  margin: 0 0 30px;
+  font-size: 30px;     /* ↑ antes 24 */
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+/* Call Now */
+.contact__cta{
+  display: inline-block;
+  font-size: 14px;     /* ↑ antes 12 */
+  font-weight: 600;
+}
+
+/* Última línea “Call Now” (la extra de abajo) */
+.contact__cta--bottom{
+  display: block;
+  margin-top: 34px;    /* separación para que se vea como en la imagen */
+}
+
+/* Responsive: mismo look, solo baja menos (para que no quede demasiado abajo) */
+@media (max-width: 1024px){
+  .contact__wrap{ margin-top: 120px; }
+  .contact__phone{ font-size: 28px; }
+}
+
+@media (max-width: 640px){
+  .contact{ padding-bottom: 100px; }
+  .contact__wrap{ margin-top: 95px; }
+  .contact__kicker{ font-size: 14px; }
+  .contact__phone{ font-size: 26px; }
+  .contact__cta{ font-size: 14px; }
+}

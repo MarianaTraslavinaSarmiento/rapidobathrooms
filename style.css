@@ -1,0 +1,252 @@
+/* ----------------------------
+   Base
+---------------------------- */
+:root{
+  --text: #0b0b0b;
+  --muted: #6b6b6b;
+  --bg: #ffffff;
+
+  --max: 1200px;
+  --gap: 22px;
+
+  --overlay: rgba(0,0,0,.22);
+  --overlay-hover: rgba(0,0,0,.38);
+
+  --radius: 2px;
+
+
+  --gap: 18px;     /* se parece más al spacing del screenshot */
+}
+
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+
+  /* “System Helvetica look” */
+  font-family: "Helvetica Neue", Helvetica, Arial, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a{ color: inherit; text-decoration: none; }
+img{ display:block; max-width:100%; }
+
+/* ----------------------------
+   Layout
+---------------------------- */
+.container{
+  width: min(var(--max), calc(100% - 64px)); /* más ancho en desktop */
+  margin: 0 auto;
+}
+header.site-header{
+  padding: 72px 0 34px;
+  text-align: center;
+}
+
+.brand{
+  font-weight: 300;
+  letter-spacing: .22em;
+  font-size: 56px;
+  line-height: 1.05;
+  margin: 0 0 14px;
+}
+
+.phone{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text);
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0 0 26px;
+}
+
+.phone svg{
+  width: 18px;
+  height: 18px;
+}
+
+.nav{
+  display: inline-flex;
+  gap: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.nav a{
+  font-size: 16px;
+  color: var(--text);
+  font-weight: 400;
+}
+
+.nav a[aria-current="page"]{
+  font-weight: 700;
+}
+
+/* ----------------------------
+   Grid
+---------------------------- */
+main{
+  padding: 34px 0 70px;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap);
+}
+
+
+.card{
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #f4f4f4;
+
+  /* MISMA ALTURA EN TODOS LOS DISPOSITIVOS */
+  aspect-ratio: 4 / 5;   /* alto */
+}
+
+.card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.001);
+  transition: transform 220ms ease;
+}
+
+
+.card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: var(--overlay);
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.card__title{
+  position: absolute;
+  left: 16px;
+  bottom: 14px;
+  right: 16px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: .01em;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 200ms ease, transform 200ms ease;
+  z-index: 2;
+}
+
+/* Hover/focus: oscurece + aparece título */
+.card:hover::after{ opacity: 1; background: var(--overlay-hover); }
+.card:hover .card__title{ opacity: 1; transform: translateY(0); }
+.card:hover img{ transform: scale(1.03); }
+
+.card:focus-visible{
+  outline: 2px solid #111;
+  outline-offset: 3px;
+}
+
+.card:focus-visible::after{ opacity: 1; background: var(--overlay-hover); }
+.card:focus-visible .card__title{ opacity: 1; transform: translateY(0); }
+
+/* ----------------------------
+   Responsive
+---------------------------- */
+/* Tablet: 2 columnas */
+@media (max-width: 1024px){
+  header.site-header{ padding-top: 58px; }
+  .brand{ font-size: 48px; }
+  .grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Mobile: 1 columna (una imagen encima de otra) */
+@media (max-width: 640px){
+  .container{
+    width: min(var(--max), calc(100% - 40px)); /* antes 28px */
+  }
+
+  header.site-header{
+    padding: 44px 0 22px;
+  }
+
+  .brand{
+    font-size: 44px;
+    letter-spacing: .18em;
+    margin-bottom: 10px;
+  }
+
+  .phone{
+    margin-bottom: 18px;
+    font-size: 16px;
+  }
+
+  .nav{ gap: 32px; }
+
+  main{ padding-top: 18px; }
+  .grid{ grid-template-columns: 1fr;
+  gap: 30px  }
+}
+
+/* Footer CTA (igual al screenshot) */
+.site-footer{
+  /* espacio blanco arriba y abajo, grande e igual */
+  padding: 170px 0 170px;
+  text-align: center;
+}
+
+.footer__title{
+  margin: 0 0 14px;
+  font-size: 45px;
+  font-weight: 400;
+  letter-spacing: .01em;
+  line-height: 1.08;
+}
+
+.footer__sub{
+  margin: 0 0 44px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+}
+
+.footer__link{
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer__link svg{
+  width: 18px;
+  height: 18px;
+}
+
+/* (opcional) hover sutil tipo minimal */
+.footer__link:hover{
+  opacity: .8;
+}
+
+/* Responsive */
+@media (max-width: 1024px){
+  .site-footer{ padding: 140px 0; }
+  .footer__title{ font-size: 46px; }
+}
+
+@media (max-width: 640px){
+  .site-footer{ padding: 110px 0; }
+  .footer__title{ font-size: 38px; }
+  .footer__sub{ font-size: 15px; margin-bottom: 36px; }
+}
+
