@@ -1,0 +1,128 @@
+
+.ba{
+  padding: 0 0 120px;
+}
+
+
+/* El primero: distancia desde el header (similar a otras páginas) */
+.ba-pair--first{
+  margin-top: 34px;
+}
+
+/* Separación grande entre trabajos (más que el gap normal) */
+.ba-pair--spaced{
+  margin-top: 64px; /* ajusta si quieres más/menos */
+}
+
+/* Cada imagen como “card” del estilo */
+.ba-photo{
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #f4f4f4;
+
+  /* alto parecido a cards grandes del sitio */
+  aspect-ratio: 4 / 3;
+}
+
+/* Imagen ocupa todo */
+.ba-photo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tag minimal */
+.ba-tag{
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 2px;
+  letter-spacing: .04em;
+}
+
+/* Mobile: una columna, mismo gap */
+@media (max-width: 640px){
+  .ba-pair{
+    grid-template-columns: 1fr;
+    gap: var(--gap); /* mismo gap */
+  }
+
+  .ba-pair--first{
+    margin-top: 24px;
+  }
+
+  .ba-pair--spaced{
+    margin-top: 46px; /* separación entre trabajos en móvil */
+  }
+
+  /* opcional: un pelín menos alta para que no sea gigante */
+  .ba-photo{
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* --- FIX DEFINITIVO: caja = imagen (1:1) --- */
+
+/* 1) El par SIEMPRE ocupa todo el ancho disponible */
+.ba-pair{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  gap: var(--gap);
+}
+
+/* 2) Desktop/tablet: 2 columnas reales */
+@media (min-width: 641px){
+  .ba-pair{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* 3) Mobile: 1 columna */
+@media (max-width: 640px){
+  .ba-pair{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 4) LA TARJETA ES EL FRAME. NO padding, NO height extra */
+.ba-photo{
+  margin: 0;                 /* por si el figure mete márgenes */
+  padding: 0;                /* cero */
+  border: 0;                 /* cero */
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #f4f4f4;
+
+  /* La caja se define solo por el ancho de la columna */
+  aspect-ratio: 4 / 3;       /* ajusta si quieres más alta: 3/2 */
+}
+
+/* 5) LA IMAGEN OCUPA EXACTAMENTE LA CAJA */
+.ba-photo img{
+  display: block;            /* elimina espacios raros */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* rellena sin deformar */
+}
+
+/* 6) Tags */
+.ba-tag{
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 2px;
+  letter-spacing: .04em;
+}
