@@ -55,7 +55,7 @@ img{ display:block; max-width:100%; }
   margin: 0 auto;
 }
 header.site-header{
-  padding: 75px 0 75px;
+  padding: 50px 0 75px;
   text-align: center;
 }
 
@@ -192,7 +192,7 @@ main{
   }
 
   header.site-header{
-    padding: 70px 0 70px;
+    padding: 40px 0 70px;
   }
 
   .brand{
@@ -265,3 +265,44 @@ main{
   .footer__sub{ font-size: 15px; margin-bottom: 36px; }
 }
 
+/* ================================
+   HEADER LOGO (FIX COMPLETO)
+   ================================ */
+
+.brand{
+  margin: 0;
+  padding: 0;
+}
+
+/* El link NO recorta, solo centra */
+.brand__link{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+/* LOGO: grande, sin recortes */
+.brand__logo{
+  display: block;
+  height: 200px;      /* tamaño adecuado en desktop */
+  width: auto;
+  max-width: 520px;   /* evita que se vuelva absurdo si la pantalla es gigante */
+  object-fit: contain;
+}
+
+/* Tablet */
+@media (max-width: 1024px){
+  .brand__logo{
+    height: 150px;
+    max-width: 420px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px){
+  .brand__logo{
+    height: 150px;
+    max-width: 320px;
+  }
+}
