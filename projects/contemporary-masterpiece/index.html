@@ -1,91 +1,118 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contemporary Masterpiece - Bathroom Renovation Project | DC</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Spa-Like Sanctuary - Bathroom Renovation Project | DC</title>
 
-  <!-- Global -->
-  <link rel="stylesheet" href="/style.css" />
-  <!-- Único para todos los proyectos -->
-  <link rel="stylesheet" href="/projects/project.css" />
-</head>
-<body>
+    <!-- Global -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Único para todos los proyectos -->
+    <link rel="stylesheet" href="/projects/project.css" />
+  </head>
 
-  <!-- MISMO HEADER GLOBAL -->
-<header class="site-header">
-  <div class="container">
+  <body>
+    <!-- HEADER GLOBAL -->
+    <header class="site-header">
+      <div class="container">
+        <h1 class="brand">
+          <a href="/" aria-label="RAPIDO Home" class="brand__link">
+            <img
+              class="brand__logo"
+              src="/storage/img/logo.png"
+              alt="Rapido Bathrooms"
+            />
+          </a>
+        </h1>
 
-    <h1 class="brand">
-      <a href="/" aria-label="RAPIDO Home" class="brand__link">
-        <img class="brand__logo" src="/storage/img/logo.png" alt="Rapido Bathrooms" />
-      </a>
-    </h1>
+        <a class="phone" href="tel:+12029371115" aria-label="Call RAPIDO">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M6.6 10.8c1.4 2.6 3.5 4.7 6.1 6.1l2-2c.2-.2.6-.3.9-.2 1 .3 2 .5 3.1.5.5 0 .9.4.9.9V20c0 .5-.4.9-.9.9C10.5 20.9 3.1 13.5 3.1 4.9c0-.5.4-.9.9-.9h3.1c.5 0 .9.4.9.9 0 1 .2 2.1.5 3.1.1.3 0 .7-.2.9l-2 2z"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>(202) 937-1115</span>
+        </a>
 
-    <a class="phone" href="tel:+12029371115" aria-label="Call RAPIDO">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M6.6 10.8c1.4 2.6 3.5 4.7 6.1 6.1l2-2c.2-.2.6-.3.9-.2 1 .3 2 .5 3.1.5.5 0 .9.4.9.9V20c0 .5-.4.9-.9.9C10.5 20.9 3.1 13.5 3.1 4.9c0-.5.4-.9.9-.9h3.1c.5 0 .9.4.9.9 0 1 .2 2.1.5 3.1.1.3 0 .7-.2.9l-2 2z"
-              stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span>(202) 937-1115</span>
-    </a>
-
-    <nav aria-label="Primary">
-      <ul class="nav">
-        <li><a href="/" aria-current="page">Projects</a></li>
-        <li><a href="/studio">About</a></li>
-      </ul>
-    </nav>
-
-  </div>
-</header>
-
-  <main class="project">
-    <div class="container project__top">
-
-      <!-- Back to Projects -->
-      <a class="project__back" href="/">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        <span>Back to Projects</span>
-      </a>
-
-      <!-- Imagen del proyecto (la misma del grid) -->
-      <div class="project__hero">
-        <img src="/storage/img/contemporary-masterpiece.png" alt="Modern Minimalist Retreat" />
-      </div>
-
-      <!-- Info -->
-      <section class="project__content">
-        <h3 class="project__name">Contemporary Masterpiece</h3>
-
-        <p class="project__desc">
-          Contemporary bathroom masterpiece in Washington, DC showcasing bespoke details, premium surfaces, and a refined layout.
-        </p>
-
-        <div class="project__section">
-          <div class="project__section-title">PROJECT TIMELINE</div>
-          <p class="project__timeline">Typical turnaround: 7–10 days</p>
-        </div>
-
-        <div class="project__section">
-          <div class="project__section-title">PROJECT HIGHLIGHTS</div>
-
-          <!-- TODOS a la izquierda, uno debajo del otro -->
-          <ul class="project__highlights">
-            <li><span class="project__check">✓</span> Licensed + insured</li>
-            <li><span class="project__check">✓</span> High-end finishes</li>
-            <li><span class="project__check">✓</span> Fast timelines</li>
+        <nav aria-label="Primary">
+          <ul class="nav">
+            <li><a href="/" aria-current="page">Projects</a></li>
+            <li><a href="/studio">About</a></li>
           </ul>
-        </div>
+        </nav>
+      </div>
+    </header>
 
-        <!-- CTA -->
-      
-      </section>
+    <main class="project">
+      <div class="container project__top">
+        <!-- Back to Projects -->
+        <a class="project__back" href="/">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M15 18l-6-6 6-6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>Back to Projects</span>
+        </a>
 
-    </div>
-  </main>
 
-</body>
+        <!-- IMÁGENES (layout pmedia) -->
+        <section class="pmedia" aria-label="Project images">
+          <div class="pmedia__grid">
+            <figure class="pmedia__item">
+              <img
+                src="/storage/img/contemporary-masterpiece.png"
+                alt="McLean remodel — Photo 1"
+              />
+            </figure>
+          </div>
+        </section>
+
+        <!-- INFO -->
+        <h2 class="project__type">Light-Filled Master Bath Transformation</h2>
+
+        <section class="project__content">
+          <p class="project__desc">
+            This luxury master bathroom remodel delivers a clean, modern feel with bright finishes, a smart layout, and premium craftsmanship. The space was redesigned to feel open and calming, featuring a spacious walk-in shower with frameless glass, a freestanding soaking tub, and a sleek vanity setup that brings both function and style to everyday routines.
+          </p>
+        </section>
+
+          <div class="project__section">
+            <div class="project__section-title">
+              Project highlights:
+            </div>
+          </div>
+
+          <ul class="project__highlights">
+            <li>
+              <span class="project__check">✓</span> Frameless glass walk-in shower with a clean, modern look
+            </li>
+            <li>
+              <span class="project__check">✓</span> Freestanding soaking tub for a spa-style centerpiece
+            </li>
+            <li>
+              <span class="project__check">✓</span> Bright, large-format tile for a seamless, upscale finish
+            </li>
+            <li>
+              <span class="project__check">✓</span> Custom vanity layout with ample storage and counter space
+            </li>
+            <li>
+              <span class="project__check">✓</span> LED mirrors + upgraded lighting for a crisp, high-end feel
+            </li>
+            <li>
+              <span class="project__check">✓</span> Precision craftsmanship focused on durability, waterproofing, and clean lines
+            </li>            
+          </ul>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>

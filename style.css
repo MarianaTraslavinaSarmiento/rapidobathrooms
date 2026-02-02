@@ -55,7 +55,7 @@ img{ display:block; max-width:100%; }
   margin: 0 auto;
 }
 header.site-header{
-  padding: 50px 0 75px;
+  padding: 50px 0 60px;
   text-align: center;
 }
 
@@ -192,7 +192,7 @@ main{
   }
 
   header.site-header{
-    padding: 40px 0 70px;
+    padding: 40px 0 40px;
   }
 
   .brand{
