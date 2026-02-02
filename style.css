@@ -76,7 +76,7 @@ header.site-header{
   gap: 10px;
   color: var(--text);
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   margin: 0 0 26px;
 }
 
@@ -96,7 +96,7 @@ header.site-header{
 }
 
 .nav a{
-  font-size: 16px;
+  font-size: 17px;
   color: var(--text);
   font-weight: 400;
 }
@@ -203,7 +203,7 @@ main{
 
   .phone{
     margin-bottom: 18px;
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .nav{ gap: 32px; }
@@ -211,6 +211,12 @@ main{
   main{ padding-top: 18px; }
   .grid{ grid-template-columns: 1fr;
   gap: 30px  }
+
+  .nav a{
+  font-size: 20px;
+  color: var(--text);
+  font-weight: 400;
+}
 }
 
 /* Footer CTA (igual al screenshot) */
@@ -338,9 +344,6 @@ main{
   gap: 28px;
 }
 
-.nav-icons{
-  margin-top: 6px; /* súbelo a 10-14px si lo quieres todavía más separado */
-}
 
 .nav-icon{
   display: inline-flex;
@@ -350,8 +353,8 @@ main{
 }
 
 .nav-icon svg{
-  width: 25px;
-  height: 25px;
+  width: 27px;
+  height: 27px;
   display: block;
 }
 
@@ -369,7 +372,7 @@ main{
   .site-nav{ gap: 22px; }
   .nav{ gap: 32px; }
   .nav-icons{ gap: 18px; margin-top: 2px;}
-  .nav-icon svg{ width: 30px; height: 30px; }
+  .nav-icon svg{ width: 27px; height: 27px; }
 }
 
 
