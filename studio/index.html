@@ -1,100 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>RAPIDO — About</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RAPIDO — About</title>
     <!-- Global -->
-  <link rel="stylesheet" href="/style.css" />
-  <!-- Solo About -->
-  <link rel="stylesheet" href="/studio/about.css" />
-</head>
-<body>
-<header class="site-header">
-  <div class="container">
+    <link rel="stylesheet" href="/style.css" />
+    <!-- Solo About -->
+    <link rel="stylesheet" href="/studio/about.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="brand">
+          <a href="/" aria-label="RAPIDO Home" class="brand__link">
+            <img
+              class="brand__logo"
+              src="/storage/img/logo_rapidobathrooms.png"
+              alt="Rapido Bathrooms"
+            />
+          </a>
+        </h1>
 
-    <h1 class="brand">
-      <a href="/" aria-label="RAPIDO Home" class="brand__link">
-        <img class="brand__logo" src="/storage/img/logo_rapidobathrooms.png" alt="Rapido Bathrooms" />
-      </a>
-    </h1>
+        <a class="phone" href="tel:+12029371115" aria-label="Call RAPIDO">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path
+              d="M6.6 10.8c1.4 2.6 3.5 4.7 6.1 6.1l2-2c.2-.2.6-.3.9-.2 1 .3 2 .5 3.1.5.5 0 .9.4.9.9V20c0 .5-.4.9-.9.9C10.5 20.9 3.1 13.5 3.1 4.9c0-.5.4-.9.9-.9h3.1c.5 0 .9.4.9.9 0 1 .2 2.1.5 3.1.1.3 0 .7-.2.9l-2 2z"
+              stroke="currentColor"
+              stroke-width="1.6"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>(202) 937-1115</span>
+        </a>
 
-    <a class="phone" href="tel:+12029371115" aria-label="Call RAPIDO">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M6.6 10.8c1.4 2.6 3.5 4.7 6.1 6.1l2-2c.2-.2.6-.3.9-.2 1 .3 2 .5 3.1.5.5 0 .9.4.9.9V20c0 .5-.4.9-.9.9C10.5 20.9 3.1 13.5 3.1 4.9c0-.5.4-.9.9-.9h3.1c.5 0 .9.4.9.9 0 1 .2 2.1.5 3.1.1.3 0 .7-.2.9l-2 2z"
-              stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span>(202) 937-1115</span>
-    </a>
-
-    <nav aria-label="Primary">
-      <ul class="nav">
-        <li><a href="/">Projects</a></li>
-        <li><a href="/studio" aria-current="page">About</a></li>
-        <li><a href="/before-after">Before/After</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
-
-  </div>
-</header>
+        <nav aria-label="Primary">
+          <ul class="nav">
+            <li><a href="/">Projects</a></li>
+            <li><a href="/studio" aria-current="page">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
     <!-- ABOUT CONTENT -->
-  <main class="about">
-    <div class="container">
-      <section class="about__grid" aria-label="About content">
-
-        <!-- Izquierda: imagen -->
-        <div class="about__media">
-          <img src="/storage/img/about.jpeg" alt="Bathroom project" />
-        </div>
-
-        <!-- Derecha: texto -->
-        <div class="about__panel">
-          <div class="about__kicker">ABOUT</div>
-          <h2 class="about__title">About Rapido Bathrooms</h2>
-
-          <div class="about__body">
-            <p>
-              Rapido Bathrooms brings over 15 years of experience renovating high-end, modern
-              bathrooms throughout Washington, DC, including NW, NE, and SE.
-            </p>
-            <p>
-             Our goal is to complete most bathroom remodels in <bold>10 working days</bold>. “Working days” are active construction days during normal work hours. If we’re waiting on inspections, approvals, or other external steps, those days don’t count as working days. We communicate timelines clearly from day one, so expectations stay aligned throughout the project.
-            </p>
+    <main class="about">
+      <div class="container">
+        <section class="about__grid" aria-label="About content">
+          <!-- Izquierda: imagen -->
+          <div class="about__media">
+            <img src="/storage/img/cove-lit-calm.png" alt="Bathroom project" />
           </div>
 
-          <!-- Diferenciadores (con chulitos) -->
-<div class="about__highlights">
-  <div class="about__highlights-title">Why choose Rapido Bathrooms?</div>
+          <!-- Derecha: texto -->
+          <div class="about__panel">
+            <div class="about__kicker">ABOUT</div>
+            <h2 class="about__title">About Rapido Bathrooms</h2>
 
-  <ul class="about__highlights-list">
-    <li><span class="about__check">✓</span> Clean, organized job sites — always respectful of your home</li>
-    <li><span class="about__check">✓</span> Urgent, efficient work without sacrificing quality</li>
-    <li><span class="about__check">✓</span> Permits, codes, and inspections handled properly</li>
-    <li><span class="about__check">✓</span> Smooth, stress-free remodeling experience</li>
-    <li><span class="about__check">✓</span> Done right — no shortcuts</li>
-  </ul>
-</div>
-
-
-          <hr class="about__divider" />
-
-          <div class="about__meta">
-            <div class="about__meta-block">
-              <div class="about__meta-label">LOCATION</div>
-              <div class="about__meta-value">2919 Rhode Islad Avenue, Washington, DC 20018</div>
+            <div class="about__body">
+              <p>
+                Rapido Bathrooms brings over 15 years of experience renovating
+                high-end, modern bathrooms throughout Washington, DC, including
+                NW, NE, and SE.
+              </p>
+              <p>
+                Our goal is to complete most bathroom remodels in
+                <bold>10 working days</bold>. “Working days” are active
+                construction days during normal work hours. If we’re waiting on
+                inspections, approvals, or other external steps, those days
+                don’t count as working days. We communicate timelines clearly
+                from day one, so expectations stay aligned throughout the
+                project.
+              </p>
             </div>
 
-            <div class="about__meta-block">
-              <div class="about__meta-label">CONTACT</div>
-              <div class="about__meta-value">(202) 937-1115</div>
+            <!-- Diferenciadores (con chulitos) -->
+            <div class="about__highlights">
+              <div class="about__highlights-title">
+                Why choose Rapido Bathrooms?
+              </div>
+
+              <ul class="about__highlights-list">
+                <li>
+                  <span class="about__check">✓</span> Clean, organized job sites
+                  — always respectful of your home
+                </li>
+                <li>
+                  <span class="about__check">✓</span> Urgent, efficient work
+                  without sacrificing quality
+                </li>
+                <li>
+                  <span class="about__check">✓</span> Permits, codes, and
+                  inspections handled properly
+                </li>
+                <li>
+                  <span class="about__check">✓</span> Smooth, stress-free
+                  remodeling experience
+                </li>
+                <li>
+                  <span class="about__check">✓</span> Done right — no shortcuts
+                </li>
+              </ul>
+            </div>
+
+            <hr class="about__divider" />
+
+            <div class="about__meta">
+              <div class="about__meta-block">
+                <div class="about__meta-label">LOCATION</div>
+                <div class="about__meta-value">
+                  2919 Rhode Islad Avenue, Washington, DC 20018
+                </div>
+              </div>
+
+              <div class="about__meta-block">
+                <div class="about__meta-label">CONTACT</div>
+                <div class="about__meta-value">(202) 937-1115</div>
+              </div>
             </div>
           </div>
-        </div>
-
-      </section>
-    </div>
-  </main>
-</body>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
