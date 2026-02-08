@@ -28,8 +28,8 @@
 /* Título fijo */
 .project__type {
   margin-top: 45px;
-  font-size: 22px;
-  font-weight: 400;
+  font-size: 25px;
+  font-weight: 600;
   letter-spacing: 0.04em;
   margin: 20 0 22px;
 }
@@ -74,8 +74,8 @@
 /* Subtítulos tipo “PROJECT TIMELINE”, “PROJECT HIGHLIGHTS” */
 .project__section-title {
   font-size: 17px;
-  letter-spacing: 0.18em;
-  font-weight: 700;
+  letter-spacing: 0.10em;
+  font-weight: 600;
   margin: 30px 0 12px;
 }
 
