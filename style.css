@@ -81,8 +81,8 @@ header.site-header{
 }
 
 .phone svg{
-  width: 18px;
-  height: 18px;
+  width: 23px;
+  height: 23px;
 }
 
 .nav{
@@ -109,7 +109,7 @@ header.site-header{
    Grid
 ---------------------------- */
 main{
-  padding: 34px 0 70px;
+  padding: 34px 0;
 }
 
 .grid{
@@ -180,7 +180,7 @@ main{
 ---------------------------- */
 /* Tablet: 2 columnas */
 @media (max-width: 1024px){
-  header.site-header{ padding-top: 70px; padding-bottom: 70px; }
+  header.site-header{ padding-top: 70px }
   .brand{ font-size: 48px; }
   .grid{ grid-template-columns: repeat(2, 1fr); }
 }

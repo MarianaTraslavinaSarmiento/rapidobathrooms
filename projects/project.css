@@ -1,8 +1,5 @@
 /* /projects/project.css */
 
-.project {
-  padding: 0 0 110px;
-}
 
 /* Distancia igual a la captura: botón pegado arriba pero con aire */
 .project__top {
@@ -158,9 +155,6 @@
 }
 
 @media (max-width: 640px) {
-  .project {
-    padding-bottom: 80px;
-  }
 
   /* “Quitar altura”: forzamos un recorte leve para que no sea enorme */
   .project__hero {
